@@ -10,4 +10,4 @@ $(PROG): $(OBJ)
 	$(CXX) $(CXXFLAGS) -o $@ $^
 
 clean:
-	rm -f $(PROG) $(PROG).so
+	rm -f $(PROG) $(PROG).o
