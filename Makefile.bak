@@ -1,0 +1,13 @@
+CC = clang
+CXX = clang++
+
+prog = pwd
+
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c -std=c++20 -o $@ $<
+
+$(prog): $(prog).o
+	$(CXX) $(CXXFLAGS) -o $(prog) $(prog).o
+
+clean:
+	rm -f $(prog).o $(prog).so
